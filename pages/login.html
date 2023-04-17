@@ -29,20 +29,22 @@
     </header>
 
     <main class="main content">
-      <section class="login">
+      <form class="login" action="" form-user>
         <h2 class="login__title">Iniciar Sesión</h2>
         <input
+          id="email"
           type="text"
           class="login__input"
           placeholder="Escriba su correo electrónico"
         />
         <input
+          id="password"
           type="password"
           class="login__input"
           placeholder="Escriba su contraseña"
         />
-        <button class="btn btn_blue">Entrar</button>
-      </section>
+        <button type="submit" class="btn btn_blue">Entrar</button>
+      </form>
     </main>
 
     <section class="contact">
@@ -79,5 +81,6 @@
         2023
       </h4>
     </footer>
+    <script type="module" src="../controllers/usuarios.js"></script>
   </body>
 </html>

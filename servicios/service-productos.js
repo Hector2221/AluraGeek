@@ -38,19 +38,19 @@ const crearProducto = async (nombre, imageURL, price, describe, category) => {
 };
 
 // elimina clientes
-// const eliminarProducto = async (id) => {
-//   try {
-//     const res = await fetch(`http://localhost:3000/productos/${id}`, {
-//       method: "DELETE",
-//     });
-//     return res;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+const eliminarProducto = async (id) => {
+  try {
+    const res = await fetch(`http://localhost:3000/productos/${id}`, {
+      method: "DELETE",
+    });
+    return res;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const productos = {
   api,
   crearProducto,
-  // eliminarProducto();
+  eliminarProducto,
 };

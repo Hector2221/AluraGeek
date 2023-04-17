@@ -3,16 +3,16 @@ import { productos } from "../servicios/service-productos.js";
 // imprime todos
 try {
   const data = await productos.api();
-  const cards = document.querySelector("[date-starwars]");
+  const cards = document.querySelector("[date-productos]");
 
   data.forEach((producto) => {
     const content = `<div class="card">
-        <img class="card__img" src=${producto.imageURL} alt="" />
+        <img class="card__img" src=.${producto.imageURL} alt="" />
         <p class="card__title">${producto.name}</p>
         <p class="card__price">${producto.price}</p>
         <a href="" class="card__ver">Ver producto</a>
       </div>`;
-    // cards.innerHTML += content;
+    cards.innerHTML += content;
   });
 } catch (error) {
   console.log(error);
