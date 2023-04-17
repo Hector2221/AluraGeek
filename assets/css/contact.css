@@ -1,0 +1,81 @@
+.contact {
+
+    background: #EAF2FD;
+    padding: 64px 0px;
+}
+
+.contact__grid {
+    display: grid;
+    grid-template-columns: 180px 180px 560px;
+    gap: 100px;
+}
+
+.contact__colum {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact__enlace {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+}
+
+.contact__nosotros {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+}
+
+
+
+
+.contact__input {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #A2A2A2;
+    padding: 16px 12px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #C8C8C8;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contact__textarea {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #A2A2A2;
+    padding: 16px 12px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #C8C8C8;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.footer {
+    text-align: center;
+    padding: 32px 0px;
+}
+
+.footer__copy {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #464646;
+}
