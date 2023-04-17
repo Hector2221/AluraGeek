@@ -37,6 +37,7 @@
     height: 252px;
     display: flex;
     flex-direction: column;
+    position: relative;
     gap: 8px;
 }
 
@@ -64,4 +65,23 @@
     font-size: 16px;
     line-height: 19px;
     color: #2A7AE4;
+}
+
+.card__content {
+    display: flex;
+    gap: 18px;
+    position: absolute;
+    right: 0;
+    padding: 11px;
+}
+
+.card__content img {
+    width: 24px;
+    height: 24px;
+}
+
+.card__btn {
+    cursor: pointer;
+    background: none;
+    border: none;
 }
