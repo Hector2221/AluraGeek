@@ -15,9 +15,9 @@ try {
       <button class="card__btn delete" id="${producto.id}">
         <img src="../assets/img/delete.svg" alt="" />
       </button>
-      <button class="card__btn edit">
+      <a href="./editar.html?id=${producto.id}">
         <img src="../assets/img/edit.svg" alt="" class="edit" />
-      </button>
+      </a>
     </div>
   </div>`;
     cards.innerHTML += content;
@@ -29,10 +29,10 @@ try {
       const id = event.target.closest(".card").querySelector(".delete").id;
       productos
         .eliminarProducto(id)
-        .then((res) => {
+        .then(() => {
           alert("Producto Eliminado");
         })
-        .catch((err) => {
+        .catch(() => {
           alert("No se pudo eliminar");
         });
     });

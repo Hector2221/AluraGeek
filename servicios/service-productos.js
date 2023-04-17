@@ -37,7 +37,7 @@ const crearProducto = async (nombre, imageURL, price, describe, category) => {
   }
 };
 
-// elimina clientes
+// elimina producto
 const eliminarProducto = async (id) => {
   try {
     const res = await fetch(`http://localhost:3000/productos/${id}`, {
@@ -49,8 +49,34 @@ const eliminarProducto = async (id) => {
   }
 };
 
+// detalles producto
+const detalleProducto = async (id) => {
+  const res = await fetch(`http://localhost:3000/productos/${id}`);
+  const data = await res.json();
+  return data;
+};
+
+//actualizar Productos
+const actualizar = async (name, imageURL, price, id, describe, category) => {
+  try {
+    const res = await fetch(`http://localhost:3000/productos/${id}`, {
+      method: "PUT",
+      headers: {
+        "content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, imageURL, price, id, describe, category }),
+    });
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 export const productos = {
   api,
   crearProducto,
   eliminarProducto,
+  detalleProducto,
+  actualizar,
 };
