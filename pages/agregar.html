@@ -29,23 +29,36 @@
     </header>
 
     <main class="main content">
-      <form action="" class="agregar">
+      <form action="" class="agregar" data-agregar>
         <h2>Agregar nuevo producto</h2>
-        <input type="text" class="agregar__input" placeholder="URL de imagen" />
-        <input type="text" class="agregar__input" placeholder="Categoría" />
+        <input
+          type="text"
+          class="agregar__input"
+          placeholder="URL de imagen"
+          data-url
+        />
+        <input
+          type="text"
+          class="agregar__input"
+          placeholder="Categoría"
+          data-categoria
+        />
         <input
           type="text"
           class="agregar__input"
           placeholder="Nombre del producto"
+          data-producto
         />
         <input
           type="text"
           class="agregar__input"
           placeholder="Precio del produtco"
+          data-precio
         />
         <textarea
           class="agregar__input"
           placeholder="Descripción del producto"
+          data-descripcion
         ></textarea>
         <button class="btn btn__blue btn-agregar">Agregar producto</button>
       </form>
@@ -67,7 +80,7 @@
           <a href="#" class="contact__enlace">Anúncie aquí</a>
         </div>
 
-        <form class="contact__colum" action="">
+        <form class="contact__colum" action="" data-agregar>
           <h3 class="contact__nosotros">Hable con nosotros</h3>
           <input type="text" class="contact__input" placeholder="Nombre" />
           <textarea
@@ -85,5 +98,6 @@
         2023
       </h4>
     </footer>
+    <script type="module" src="../controllers/crearProducto.js"></script>
   </body>
 </html>
