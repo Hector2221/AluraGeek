@@ -1,0 +1,38 @@
+.producto {
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+.producto__img {
+    width: 450px;
+    height: 403px;
+    object-fit: fill;
+}
+
+.producto__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.producto__title {
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 61px;
+    color: #464646;
+}
+
+.producto__price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+}
+
+.producto__describe {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+}

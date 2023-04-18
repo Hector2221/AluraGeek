@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/header.css" />
     <link rel="stylesheet" href="../assets/css/contact.css" />
-    <link rel="stylesheet" href="../assets/css/card.css" />
+    <link rel="stylesheet" href="../assets/css/producto.css" />
   </head>
   <body>
     <header class="header">
       <nav class="nav">
         <div class="header__nav content">
           <div class="nav__content">
-            <a href="./productos.html"
+            <a href="../index.html"
               ><img src="../assets/img/Logo.png" alt="" class="nav__logo"
             /></a>
             <input
@@ -29,21 +29,21 @@
     </header>
 
     <main class="main content">
-      <section class="categoria">
-        <div class="categoria__info">
-          <h2 class="categoria__title">Todos los produtos</h2>
-          <a href="./agregar.html">
-            <button class="btn btn__blue btn-products">Agregar producto</button>
-          </a>
+      <section class="producto">
+        <img src="" alt="" class="producto__img" data-img />
+        <div class="producto__content">
+          <h2 class="producto__title" data-tittle></h2>
+          <p class="producto__price" data-price></p>
+          <p class="producto__describe" data-describe></p>
         </div>
-        <div class="categoria__cards" data-productos></div>
       </section>
+      <section class="similares"></section>
     </main>
 
     <section class="contact">
       <div class="contact__grid content">
         <div class="contact__colum">
-          <a href="./productos.html"
+          <a href="../index.html"
             ><img src="../assets/img/Logo.png" alt="" class="contact__logo"
           /></a>
         </div>
@@ -74,6 +74,6 @@
         2023
       </h4>
     </footer>
-    <script type="module" src="../controllers/mostrarAdmin.js"></script>
+    <script type="module" src="../controllers/mostrarProduct.js"></script>
   </body>
 </html>
