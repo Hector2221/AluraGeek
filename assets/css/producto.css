@@ -1,6 +1,11 @@
+.main {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .producto {
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 40% 50%;
 }
 
 .producto__img {
