@@ -9,6 +9,7 @@ try {
     const precio = document.querySelector("[data-precio]").value;
     const descripcion = document.querySelector("[data-descripcion]").value;
 
+    console.log(producto);
     productos
       .crearProducto(producto, url, precio, descripcion, categoria)
       .then(() => {
