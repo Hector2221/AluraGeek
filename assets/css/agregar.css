@@ -29,3 +29,22 @@
 .btn-agregar {
     width: 100%;
 }
+
+.btn__white {
+    width: 210px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media screen and (max-width:600px) {
+    .agregar {
+        width: 328px;
+    }
+
+    .btn__white {
+        width: 160px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
