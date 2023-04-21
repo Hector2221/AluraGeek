@@ -19,6 +19,11 @@
 /* hero */
 .header__hero {
     width: 100%;
+    height: 352px;
+    background-image: url(../img/Hero.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .header__info {
@@ -58,4 +63,31 @@
     background-position: 95% 50%;
     background-repeat: no-repeat;
     font-family: 'Raleway', sans-serif;
+}
+
+@media screen and (max-width: 700px) {
+    .nav__buscador {
+        display: none;
+    }
+
+    .header__hero {
+        width: 100%;
+        height: 192px;
+        background-image: url(../img/Hero-mobil.png);
+    }
+
+    .header__info {
+        margin-top: -150px;
+        margin-bottom: 60px;
+    }
+
+    .header__title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .header__txt {
+        font-size: 14px;
+        line-height: 16px;
+    }
 }

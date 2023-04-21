@@ -51,3 +51,9 @@ a {
 .btn-products {
     width: 170px;
 }
+
+@media screen and (max-width: 700px) {
+    .btn__white {
+        padding: 16px 50px;
+    }
+}
