@@ -20,7 +20,7 @@ const obtenerInformacion = async () => {
     const perfil = await productos.detalleProducto(id);
     urlimage.value = perfil.imageURL;
     categoría.value = perfil.category;
-    producto.value = perfil.name;
+    producto.value = perfil.nombre;
     precio.value = perfil.price;
     descripcion.value = perfil.describe;
   } catch (error) {}

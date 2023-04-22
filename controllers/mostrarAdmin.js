@@ -4,18 +4,17 @@ import { productos } from "../servicios/service-productos.js";
 try {
   const data = await productos.api();
   const cards = document.querySelector("[data-productos]");
-
-  data.forEach((producto) => {
+  data.forEach((data) => {
     const content = `<div class="card">
-    <img class="card__img" src=".${producto.imageURL}" alt="" />
-    <p class="card__title">${producto.nombre}</p>
-    <p class="card__price">${producto.price}</p>
-    <a href="producto.html?id=${producto.id}" class="card__ver">Ver producto</a>
+    <img class="card__img" src=".${data.imageURL}" alt="" />
+    <p class="card__title">${data.nombre}</p>
+    <p class="card__price">${data.price}</p>
+    <a href="producto.html?id=${data.id}" class="card__ver">Ver producto</a>
     <div class="card__content">
-      <button class="card__btn delete" id="${producto.id}">
+      <button class="card__btn delete" id="${data.id}">
         <img src="../assets/img/delete.svg" alt="" />
       </button>
-      <a href="./editar.html?id=${producto.id}">
+      <a href="./editar.html?id=${data.id}">
         <img src="../assets/img/edit.svg" alt="" class="edit" />
       </a>
     </div>
@@ -31,6 +30,7 @@ try {
         .eliminarProducto(id)
         .then(() => {
           alert("Producto Eliminado");
+          window.location.href = "./productos.html";
         })
         .catch(() => {
           alert("No se pudo eliminar");

@@ -16,19 +16,19 @@ const obtenerInformacion = async () => {
   try {
     const perfil = await productos.detalleProducto(id);
     img.src = "." + perfil.imageURL;
-    tittle.textContent = perfil.name;
+    tittle.textContent = perfil.nombre;
     price.textContent = perfil.price;
     describe.textContent = perfil.describe;
 
     const data = await productos.api();
     const cards = document.querySelector("[data-productos]");
     const randomSubset = data.sort(() => 0.5 - Math.random()).slice(0, 6);
-    randomSubset.forEach((producto) => {
+    randomSubset.forEach((data) => {
       const content = `<div class="card">
-  <img class="card__img" src=".${producto.imageURL}" alt="" />
-  <p class="card__title">${producto.name}</p>
-  <p class="card__price">${producto.price}</p>
-  <a href="producto.html?id=${producto.id}" class="card__ver">Ver producto</a>
+  <img class="card__img" src=".${data.imageURL}" alt="" />
+  <p class="card__title">${data.nombre}</p>
+  <p class="card__price">${data.price}</p>
+  <a href="producto.html?id=${data.id}" class="card__ver">Ver producto</a>
 </div>`;
       cards.innerHTML += content;
     });

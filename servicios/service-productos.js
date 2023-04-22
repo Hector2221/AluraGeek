@@ -7,7 +7,9 @@
 //Read
 const api = async () => {
   try {
-    const res = await fetch("http://localhost:3000/productos");
+    const res = await fetch(
+      "https://64431bb1466f7c2b4b4e362b.mockapi.io/api/v1/productos"
+    );
     const data = await res.json();
     return data;
   } catch (error) {
@@ -18,19 +20,22 @@ const api = async () => {
 //create
 const crearProducto = async (nombre, imageURL, price, describe, category) => {
   try {
-    const res = await fetch("http://localhost:3000/productos", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({
-        nombre,
-        imageURL,
-        price,
-        describe,
-        category,
-      }),
-    });
+    const res = await fetch(
+      "https://64431bb1466f7c2b4b4e362b.mockapi.io/api/v1/productos",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          nombre,
+          imageURL,
+          price,
+          describe,
+          category,
+        }),
+      }
+    );
     return res;
   } catch (error) {
     console.log(error);
@@ -40,9 +45,12 @@ const crearProducto = async (nombre, imageURL, price, describe, category) => {
 // elimina producto
 const eliminarProducto = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/productos/${id}`, {
-      method: "DELETE",
-    });
+    const res = await fetch(
+      `https://64431bb1466f7c2b4b4e362b.mockapi.io/api/v1/productos/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
     return res;
   } catch (error) {
     console.log(error);
@@ -51,7 +59,9 @@ const eliminarProducto = async (id) => {
 
 // detalles producto
 const detalleProducto = async (id) => {
-  const res = await fetch(`http://localhost:3000/productos/${id}`);
+  const res = await fetch(
+    `https://64431bb1466f7c2b4b4e362b.mockapi.io/api/v1/productos/${id}`
+  );
   const data = await res.json();
   return data;
 };
@@ -59,13 +69,16 @@ const detalleProducto = async (id) => {
 //actualizar Productos
 const actualizar = async (name, imageURL, price, id, describe, category) => {
   try {
-    const res = await fetch(`http://localhost:3000/productos/${id}`, {
-      method: "PUT",
-      headers: {
-        "content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, imageURL, price, id, describe, category }),
-    });
+    const res = await fetch(
+      `https://64431bb1466f7c2b4b4e362b.mockapi.io/api/v1/productos/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, imageURL, price, id, describe, category }),
+      }
+    );
     const data = await res.json();
     return data;
   } catch (err) {
